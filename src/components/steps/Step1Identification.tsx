@@ -7,13 +7,31 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { HelpCircle, Building2 } from "lucide-react";
 
 const erpOptions = [
-  "TOTVS Protheus",
-  "TOTVS Datasul",
+  "Adsomos",
+  "Agely",
+  "Alterdata",
+  "Alsti",
+  "Conceito",
+  "Consistem",
+  "Dapic/ Webpic",
+  "Erp Interno",
   "Linx",
+  "Matriz",
   "Millennium",
+  "New Century",
+  "Prorius",
+  "Omie",
+  "Organiza têxtil",
   "Sankhya",
   "Senior",
+  "Siesa",
+  "Sisplan",
+  "Smart.sis",
   "SAP Business One",
+  "Systêxtil"
+  "Totvs Moda",
+  "Upis",
+  "Wiki",
   "Outro",
 ];
 
