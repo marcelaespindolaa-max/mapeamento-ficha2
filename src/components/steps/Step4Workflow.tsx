@@ -7,28 +7,28 @@ import { GitBranch } from "lucide-react";
 const exampleRows = [
   {
     stage: "Criação do Modelo",
-    system: "Audaces Isa",
+    system: "Audaces Isa/Idea",
     area: "Estilo / Design",
     data: "Croqui, referência, coleção, linha",
     obs: "Dados iniciais do produto",
   },
   {
     stage: "Desenvolvimento do Produto",
-    system: "Audaces Isa + ERP",
+    system: "Audaces Isa/Idea + ERP",
     area: "Engenharia de Produto",
     data: "Materiais, consumos, fornecedores, cores",
     obs: "Ficha parcial com BOM",
   },
   {
     stage: "Aprovação de Amostra",
-    system: "Audaces Isa",
+    system: "Audaces Idea",
     area: "Qualidade / Estilo",
     data: "Status de aprovação, comentários",
     obs: "Workflow de aprovação",
   },
   {
     stage: "Ficha Técnica Final",
-    system: "Audaces Isa → ERP",
+    system: "Audaces Isa/Idea → ERP",
     area: "Engenharia / PCP",
     data: "Ficha completa, grade, custos",
     obs: "Ponto de integração principal",
