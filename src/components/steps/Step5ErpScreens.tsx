@@ -1,10 +1,12 @@
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
-import { Monitor } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Monitor, Plus } from "lucide-react";
 
 const categories = [
   {
@@ -13,35 +15,30 @@ const categories = [
     fields: ["Referência", "Descrição", "Coleção", "Linha", "Grupo", "Subgrupo"],
   },
   {
-    key: "cores",
-    label: "Cores",
-    fields: ["Código da cor", "Descrição", "RGB/Pantone", "Cor base"],
-  },
-  {
-    key: "tamanhos",
-    label: "Tamanhos",
-    fields: ["Grade", "Tamanho base", "Escala", "Faixa de tamanhos"],
-  },
-  {
     key: "materiais",
     label: "Materiais",
     fields: ["Código", "Descrição", "Unidade", "Consumo", "Fornecedor", "Composição"],
   },
   {
     key: "operacoes",
-    label: "Operações",
+    label: "Operações / Serviços",
     fields: ["Operação", "Setor", "Tempo padrão", "Máquina", "Sequência"],
-  },
-  {
-    key: "custos",
-    label: "Custos",
-    fields: ["Tipo de custo", "Valor", "Moeda", "Centro de custo"],
   },
 ];
 
 const dataTypes = ["Texto", "Número", "Data", "Lista/Enum", "Booleano", "Código"];
 
 export default function Step5ErpScreens() {
+  const [rowCounts, setRowCounts] = useState<Record<string, number>>({
+    produto: 5,
+    materiais: 5,
+    operacoes: 5,
+  });
+
+  const addRow = (key: string) => {
+    setRowCounts((prev) => ({ ...prev, [key]: (prev[key] || 5) + 1 }));
+  };
+
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       <Card className="border-primary/20 bg-primary/5">
@@ -89,7 +86,7 @@ export default function Step5ErpScreens() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {Array.from({ length: 5 }).map((_, i) => (
+                    {Array.from({ length: rowCounts[cat.key] || 5 }).map((_, i) => (
                       <TableRow key={i}>
                         <TableCell>
                           <Input placeholder="Ex: Cadastro de Produto" className="text-xs" />
@@ -127,6 +124,16 @@ export default function Step5ErpScreens() {
                     ))}
                   </TableBody>
                 </Table>
+
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="mt-3"
+                  onClick={() => addRow(cat.key)}
+                >
+                  <Plus className="w-4 h-4 mr-1" />
+                  Adicionar linha
+                </Button>
 
                 <div className="mt-4 space-y-2">
                   <p className="text-sm font-medium">Observações / Screenshots</p>
