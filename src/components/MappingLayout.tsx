@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import {
   Building2,
-  CalendarDays,
-  Target,
   GitBranch,
   Monitor,
   BookOpen,
@@ -15,25 +13,19 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import Step1Identification from "./steps/Step1Identification";
-import Step2Timeline from "./steps/Step2Timeline";
-import Step3Benefits from "./steps/Step3Benefits";
 import Step4Workflow from "./steps/Step4Workflow";
 import Step5ErpScreens from "./steps/Step5ErpScreens";
 import Step6Rules from "./steps/Step6Rules";
 
 const steps = [
   { id: 1, title: "Identificação", icon: Building2 },
-  { id: 2, title: "Cronograma", icon: CalendarDays },
-  { id: 3, title: "Benefícios", icon: Target },
-  { id: 4, title: "Fluxo da Ficha", icon: GitBranch },
-  { id: 5, title: "Telas do ERP", icon: Monitor },
-  { id: 6, title: "Regras e Docs", icon: BookOpen },
+  { id: 2, title: "Fluxo da Ficha", icon: GitBranch },
+  { id: 3, title: "Telas do ERP", icon: Monitor },
+  { id: 4, title: "Regras e Docs", icon: BookOpen },
 ];
 
 const stepComponents = [
   Step1Identification,
-  Step2Timeline,
-  Step3Benefits,
   Step4Workflow,
   Step5ErpScreens,
   Step6Rules,

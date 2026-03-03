@@ -80,34 +80,10 @@ export default function Step1Identification() {
 
           <div className="space-y-2">
             <Label>
-              Versão do ERP
-              <FieldHelp text="Versão específica do ERP (ex: Protheus 12.1.33, Millennium 8.x)." />
-            </Label>
-            <Input placeholder="Ex: Protheus 12.1.33" />
-          </div>
-
-          <div className="space-y-2">
-            <Label>
               Implantador Responsável
               <FieldHelp text="Nome do analista/consultor Audaces responsável por este mapeamento." />
             </Label>
             <Input placeholder="Nome do implantador" />
-          </div>
-
-          <div className="space-y-2">
-            <Label>
-              Data de Início
-              <FieldHelp text="Data em que o projeto de integração foi iniciado." />
-            </Label>
-            <Input type="date" />
-          </div>
-
-          <div className="space-y-2">
-            <Label>
-              Contato no Cliente
-              <FieldHelp text="Nome e cargo da pessoa de contato no cliente para questões técnicas do ERP." />
-            </Label>
-            <Input placeholder="Ex: João Silva - Analista de TI" />
           </div>
 
           <div className="space-y-2 sm:col-span-2">
