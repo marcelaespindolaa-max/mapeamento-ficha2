@@ -2,15 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { GitBranch, ArrowRight } from "lucide-react";
-
-const workflowStages = [
-  "Criação do Modelo",
-  "Desenvolvimento do Produto",
-  "Aprovação de Amostra",
-  "Ficha Técnica Final",
-  "Ordem de Produção",
-];
+import { GitBranch } from "lucide-react";
 
 const exampleRows = [
   {
@@ -60,32 +52,25 @@ export default function Step4Workflow() {
             Instruções
           </CardTitle>
           <CardDescription>
-            Mapeie o fluxo completo da ficha técnica no cliente — desde a criação do modelo até
-            a ordem de produção. Identifique em cada etapa qual sistema é usado, a área responsável
-            e os dados envolvidos.
+            Descreva os benefícios esperados com a integração e mapeie o fluxo completo da ficha
+            técnica no cliente — desde a criação do modelo até a ordem de produção.
           </CardDescription>
         </CardHeader>
       </Card>
 
-      {/* Visual flow diagram */}
+      {/* Benefits */}
       <Card>
         <CardHeader>
-          <CardTitle>Fluxo Visual</CardTitle>
-          <CardDescription>Etapas típicas do ciclo de vida da ficha técnica</CardDescription>
+          <CardTitle>Benefícios Esperados</CardTitle>
+          <CardDescription>
+            Descreva os principais benefícios e dores que o cliente espera resolver com a integração
+          </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-wrap items-center gap-2 justify-center">
-            {workflowStages.map((stage, i) => (
-              <div key={stage} className="flex items-center gap-2">
-                <div className="bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium text-center min-w-[140px]">
-                  {stage}
-                </div>
-                {i < workflowStages.length - 1 && (
-                  <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0" />
-                )}
-              </div>
-            ))}
-          </div>
+          <Textarea
+            rows={5}
+            placeholder="Ex: Eliminação do retrabalho na digitação de fichas técnicas, redução de erros na transferência de dados, rastreabilidade de materiais, padronização de cadastros, agilidade na geração de ordens de produção..."
+          />
         </CardContent>
       </Card>
 
