@@ -77,8 +77,11 @@ export default function Step4Workflow() {
       {/* Example reference */}
       <Card className="border-accent/30 bg-accent/5">
         <CardHeader>
-          <CardTitle className="text-base text-accent-foreground">📋 Exemplo de Referência</CardTitle>
-          <CardDescription>Use esta tabela como modelo. Adapte ao fluxo real do cliente.</CardDescription>
+          <CardTitle className="text-base text-accent-foreground">📋 Exemplo Ilustrativo (apenas referência)</CardTitle>
+          <CardDescription>
+            Esta tabela é apenas um <strong>exemplo genérico</strong> para servir de inspiração. 
+            <strong> Preencha o fluxo real do cliente na tabela editável logo abaixo ↓</strong>
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
