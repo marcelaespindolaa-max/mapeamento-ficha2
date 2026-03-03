@@ -24,6 +24,11 @@ const categories = [
     label: "Operações / Serviços",
     fields: ["Operação", "Setor", "Tempo padrão", "Máquina", "Sequência"],
   },
+  {
+    key: "outros",
+    label: "Outros Cadastros",
+    fields: ["Campo", "Descrição", "Valor padrão", "Origem do dado"],
+  },
 ];
 
 const dataTypes = ["Texto", "Número", "Data", "Lista/Enum", "Booleano", "Código"];
@@ -33,6 +38,7 @@ export default function Step5ErpScreens() {
     produto: 5,
     materiais: 5,
     operacoes: 5,
+    outros: 5,
   });
 
   const addRow = (key: string) => {
