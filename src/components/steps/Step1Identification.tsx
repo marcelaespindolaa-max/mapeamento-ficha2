@@ -28,7 +28,7 @@ const erpOptions = [
   "Sisplan",
   "Smart.sis",
   "SAP Business One",
-  "Systêxtil"
+  "Systêxtil",
   "Totvs Moda",
   "Upis",
   "Wiki",
